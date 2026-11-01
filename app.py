@@ -74,11 +74,16 @@ def predict():
     file.save(file_path)
 
     try:
-        # Preprocess the image
+        print("STEP 1: Starting preprocessing", flush=True)
+
         img = preprocess_image(file_path)
 
-        # Perform prediction
-        predictions = model.predict(img)
+        print("STEP 2: Preprocessing completed", flush=True)
+
+        predictions = model.predict(img, verbose=0)
+
+        print("STEP 3: Prediction completed", flush=True)
+        
         predicted_class = int(np.argmax(predictions[0]))
         print('predicted_class is : ' , predicted_class)
 
