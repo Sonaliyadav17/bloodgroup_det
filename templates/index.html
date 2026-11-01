@@ -105,7 +105,9 @@
                     document.getElementById('result').innerText = 'Error: ' + data.error;
                 } else {
                     document.getElementById('result').innerText = 
-                        `Predicted Blood Group: ${data.predicted_label} (Confidence: ${(data.confidence * 100).toFixed(2)}%)`;
+                        Predicted Blood Group: ${data.predicted_label}<br>
+                        (Confidence: ${(data.confidence * 100).toFixed(2)}%)
+                        ;
                 }
             })
             .catch(error => {
