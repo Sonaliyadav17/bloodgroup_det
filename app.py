@@ -1,6 +1,9 @@
 from flask import Flask, request, jsonify, render_template
 import numpy as np
 import tensorflow as tf
+tf.config.threading.set_intra_op_parallelism_threads(1)
+tf.config.threading.set_inter_op_parallelism_threads(1)
+
 import cv2
 import os
 from werkzeug.utils import secure_filename
