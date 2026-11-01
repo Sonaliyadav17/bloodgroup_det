@@ -78,9 +78,9 @@ def predict():
 
         img = preprocess_image(file_path)
 
-        print("STEP 2: Preprocessing completed", flush=True)
+        print("STEP 2: Starting model inference", flush=True)
 
-        predictions = model.predict(img, verbose=0)
+        predictions = model(img, training=False).numpy()
 
         print("STEP 3: Prediction completed", flush=True)
         
