@@ -75,11 +75,6 @@ The dataset consists of fingerprint images categorized by blood groups. It is st
 - Thanks to OpenCV and TensorFlow for providing the tools needed for this project.  
 - Special thanks to the contributors of the dataset used in this project.  
 
-## 📧 Contact  
-- For any questions or feedback, feel free to reach out:  
 
-Email: brijeshrakhasiya.aiml@gmail.com  
-
-GitHub: BrijeshRakhasiya
 
 
