@@ -17,7 +17,8 @@ UPLOAD_FOLDER = os.path.join(BASE_DIR, "uploads")
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 # Load the pre-trained model
-model = tf.keras.models.load_model('./model/model.h5')
+model_path = os.path.join(BASE_DIR, "model", "model.h5")
+model = tf.keras.models.load_model(model_path)
 
 # Define the allowed extensions for uploaded files
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'bmp'}
@@ -62,7 +63,10 @@ def predict():
         return jsonify({'error': 'Invalid file type. Allowed types are png, jpg, jpeg'}), 400
 
     # Save the uploaded file
+    import uuid
+
     filename = secure_filename(file.filename)
+    filename = f"{uuid.uuid4().hex}_{filename}"
     file_path = os.path.join(UPLOAD_FOLDER, filename)
     file.save(file_path)
 
