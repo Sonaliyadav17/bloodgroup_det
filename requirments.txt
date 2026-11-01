@@ -1,0 +1,9 @@
+tensorflow
+Flask
+pandas
+torch
+keras
+opencv-python
+scikit-learn
+pillow
+pip
