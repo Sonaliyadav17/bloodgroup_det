@@ -68,8 +68,6 @@ The dataset consists of fingerprint images categorized by blood groups. It is st
 - Commit your changes.  
 - Submit a pull request.  
 
-## 📜 License  
-- This project is licensed under the MIT License. See the LICENSE file for details.  
 
 ## 🙏 Acknowledgments  
 - Thanks to OpenCV and TensorFlow for providing the tools needed for this project.  
