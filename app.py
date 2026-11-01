@@ -10,6 +10,12 @@ from tensorflow.keras.preprocessing.image import load_img, img_to_array
 
 app = Flask(__name__)
 
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+UPLOAD_FOLDER = os.path.join(BASE_DIR, "uploads")
+
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+
 # Load the pre-trained model
 model = tf.keras.models.load_model('./model/model.h5')
 
@@ -57,7 +63,7 @@ def predict():
 
     # Save the uploaded file
     filename = secure_filename(file.filename)
-    file_path = os.path.join('uploads', filename)
+    file_path = os.path.join(UPLOAD_FOLDER, filename)
     file.save(file_path)
 
     try:
