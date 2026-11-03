@@ -74,5 +74,5 @@ The dataset consists of fingerprint images categorized by blood groups. It is st
 - Special thanks to the contributors of the dataset used in this project.  
 
 
-
+## Live Demo: https://bloodgroup-det.onrender.com/
 
